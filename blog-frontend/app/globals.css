@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --background-hero: linear-gradient(to right, #ecfccb, #ccfbf1, #e0f2fe);
+  --background-admin: #f9fafb;
+}
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --breakpoint-3xl: 1920px;
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+.keen-slider__slide {
+  transition: transform 1s ease !important;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --background-hero: linear-gradient(to right, #1f2937, #111827, #000000);
+  --background-admin: #1f2937;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 9999px;
+  padding: 8px;
+  z-index: 10;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background: white;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
