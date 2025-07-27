@@ -1,5 +1,5 @@
 'use client';
-
+export const dynamic = 'force-dynamic';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -123,6 +123,6 @@ export default function SearchPage() {
     );
 }
 
-export const dynamic = 'force-dynamic';
+
 // This ensures the page is always re-rendered on each request
 // Useful for search pages where results can change frequently
