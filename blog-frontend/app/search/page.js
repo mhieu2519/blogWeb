@@ -122,3 +122,7 @@ export default function SearchPage() {
         </main>
     );
 }
+
+export const dynamic = 'force-dynamic';
+// This ensures the page is always re-rendered on each request
+// Useful for search pages where results can change frequently
