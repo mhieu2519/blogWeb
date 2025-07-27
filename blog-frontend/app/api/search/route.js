@@ -1,27 +1,23 @@
 import { NextResponse } from 'next/server';
-import { connectToDB } from '@/lib/mongodb';
-import Post from '@/models/Post';
 
 export async function GET(req) {
-    await connectToDB();
     const { searchParams } = new URL(req.url);
 
     const q = searchParams.get('q') || '';
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = 6;
-    const skip = (page - 1) * limit;
+    const page = searchParams.get('page') || '1';
+    const tagParams = searchParams.getAll('tag');
+    const tags = tagParams.map(tag => `tag=${encodeURIComponent(tag)}`).join('&');
 
-    const tags = searchParams.getAll('tag');
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/search?q=${q}&page=${page}&${tags}`;
 
-    const filter = {
-        ...(q && { title: { $regex: q, $options: 'i' } }),
-        ...(tags.length > 0 && { tags: { $in: tags } }),
-    };
+    try {
+        const res = await fetch(apiUrl, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Failed to fetch search results');
 
-    const [posts, total] = await Promise.all([
-        Post.find(filter).sort({ createdAt: -1 }).skip(skip).limit(limit),
-        Post.countDocuments(filter),
-    ]);
-
-    return NextResponse.json({ posts, total });
+        const data = await res.json();
+        return NextResponse.json(data);
+    } catch (err) {
+        console.error('Fetch error in /api/search:', err);
+        return NextResponse.json({ posts: [], total: 0 }, { status: 500 });
+    }
 }
