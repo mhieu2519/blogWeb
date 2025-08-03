@@ -29,7 +29,7 @@ export default function HomePage() {
                 className="text-center py-12 rounded-xl mb-12"
                 style={{ background: "var(--background-hero)" }}
             >
-                <h1 className="text-4xl font-bold mb-4">🌿 Blog Chill</h1>
+                <h1 className="text-4xl font-bold mb-4">🌿 Lặng</h1>
                 <p className="text-gray-600">Nơi chia sẻ cảm hứng, kỹ năng và kinh nghiệm sống mỗi ngày.</p>
             </section>
             <div className="mb-10">

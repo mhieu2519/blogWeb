@@ -65,7 +65,7 @@ export default function SearchOverlay({ isOpen, onClose }: Props) {
                 </div>
 
                 {/* Kết quả */}
-                <h3 className="text-lg font-semibold mb-4">Blog Chill</h3>
+                <h3 className="text-lg font-semibold mb-4">Lặng</h3>
                 {results.length === 0 ? (
                     <p className="text-gray-500 italic">Không tìm thấy kết quả phù hợp.</p>
                 ) : (

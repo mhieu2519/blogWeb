@@ -7,7 +7,7 @@ export default function TermsPage() {
 
             <section className="mb-6">
                 <h2 className="text-xl font-semibold mb-2">1. Chấp nhận điều khoản</h2>
-                <p>Khi sử dụng Blog Chill, bạn đồng ý tuân thủ các điều khoản được quy định tại đây.</p>
+                <p>Khi sử dụng Lặng, bạn đồng ý tuân thủ các điều khoản được quy định tại đây.</p>
             </section>
 
             <section className="mb-6">
