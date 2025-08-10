@@ -5,7 +5,12 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import PostActionMenu from './PostActionMenu';
-
+import { Roboto } from 'next/font/google';
+const roboto = Roboto({
+    weight: ["300", "400", "500", "700"],
+    subsets: ["latin"],
+    display: "swap",
+});
 export default function ClientPostDetail({ post }) {
     const router = useRouter();
     const { data: session } = useSession();

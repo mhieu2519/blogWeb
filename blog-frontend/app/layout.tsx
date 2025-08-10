@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AuthProvider from './providers/SessionProvider';
 import LayoutClientWrapper from './components/LayoutClientWrapper';
 import ThemeWrapper from './components/ThemeProvider';
 import 'leaflet/dist/leaflet.css';
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+
 
 
 const geistSans = Geist({
