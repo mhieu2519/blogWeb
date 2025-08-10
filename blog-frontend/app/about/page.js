@@ -97,7 +97,7 @@ export default function AboutPage() {
                 <section className="max-w-4xl mx-auto py-16 px-6 text-center">
                     <h3 className="text-3xl font-semibold text-pink-700 mb-6">🌍 Những nơi mình đã đi qua</h3>
                     <p className="text-gray-700">Mình từng đặt chân đến Hòa Bình, Thái Nguyên, Thanh Hóa... Mỗi nơi là một miền ký ức.</p>
-                    <p className="text-gray-700 mb-4">Đà Nẵng và Khánh Hòa mình hiện chưa đặt chân đến, nhưng với mong muốn thể hiện chủ quyền lãnh thổ dân tộc nên mình đã đánh dấu lại trên bản đồ.</p>
+                    <p className="text-gray-700 mb-4">...</p>
                     <VietnamMapWithGeoJSON />
                 </section>
 

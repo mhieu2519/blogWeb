@@ -11,11 +11,11 @@ import { useEffect, useState } from 'react';
 const visitedProvinces = [
     'Hòa Bình',
     'Thái Nguyên',
-    'Đà Nẵng',
+    'Ninh Bình',
     'Hà Nội',
     'Hải Phòng',
     'Thanh Hóa',
-    'Khánh Hòa',
+
 ];
 
 export default function VietnamMapWithGeoJSON() {
