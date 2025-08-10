@@ -72,7 +72,7 @@ export default function ClientPostDetail({ post }) {
                 />
             )}
 
-            <div className="whitespace-pre-line text-base leading-relaxed">{post.content}</div>
+            <div className={`whitespace-pre-line text-base leading-relaxed ${roboto.className}`}>{post.content}</div>
 
             {post.tags?.length > 0 && (
                 <div className="mt-6">
