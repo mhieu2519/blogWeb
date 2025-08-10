@@ -54,7 +54,7 @@ export default function Header({ toggleSearch }: HeaderProps) {
                 {/* Logo bên trái */}
                 <Link href="/" className="flex items-center space-x-3 hover:opacity-80">
                     <img src="/images/logo.png" alt="logo" className="w-10 h-10" />
-                    <span className="text-xl font-bold">Lặng</span>
+                    <span className="text-2xl font-bold">Lặng</span>
                 </Link>
 
 
