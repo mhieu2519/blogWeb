@@ -5,12 +5,18 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import PostActionMenu from './PostActionMenu';
-import { Roboto } from 'next/font/google';
+import { Roboto, Grape_Nuts } from 'next/font/google';
 const roboto = Roboto({
     weight: ["300", "400", "500", "700"],
     subsets: ["latin"],
     display: "swap",
 });
+const grapeNuts = Grape_Nuts({
+    weight: ["400"],
+    subsets: ["latin"],
+    display: "swap",
+});
+
 export default function ClientPostDetail({ post }) {
     const router = useRouter();
     const { data: session } = useSession();
@@ -77,7 +83,7 @@ export default function ClientPostDetail({ post }) {
                 />
             )}
 
-            <div className={`whitespace-pre-line text-base leading-relaxed ${roboto.className}`}>{post.content}</div>
+            <div className={`whitespace-pre-line text-base leading-relaxed ${grapeNuts.className}`}>{post.content}</div>
 
             {post.tags?.length > 0 && (
                 <div className="mt-6">
