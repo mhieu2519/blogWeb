@@ -185,7 +185,7 @@ export default function Header({ toggleSearch }: HeaderProps) {
                 ) : (
                     <Link
                         href="/login"
-                        className="bg-pink-300 hover:bg-cyan-600 p-3 rounded-full inline-flex items-center justify-center"
+                        className=" hover:bg-pink-200 p-2 rounded-full inline-flex items-center justify-center"
                     >
                         <IoMdLogIn size={20} />
                     </Link>
