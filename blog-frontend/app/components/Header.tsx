@@ -12,6 +12,8 @@ import { getServerSession } from 'next-auth/next';
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 
+import { IoMdLogIn } from "react-icons/io";
+
 type HeaderProps = {
     toggleSearch: () => void;
 };
@@ -183,9 +185,9 @@ export default function Header({ toggleSearch }: HeaderProps) {
                 ) : (
                     <Link
                         href="/login"
-                        className="bg-pink-300 hover:bg-cyan-600 px-4 py-2 rounded inline-block"
+                        className="bg-pink-300 hover:bg-cyan-600 p-3 rounded-full inline-flex items-center justify-center"
                     >
-                        🔐 Đăng nhập
+                        <IoMdLogIn size={20} />
                     </Link>
 
                 )}
