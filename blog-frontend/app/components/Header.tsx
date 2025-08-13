@@ -78,11 +78,11 @@ export default function Header({ toggleSearch }: HeaderProps) {
                         onClick={() => setOpenSmallMenu(!openSmallMenu)}
                         className="p-2 hover:bg-pink-200 rounded"
                     >
-                        <FiMenu size={24} />
+                        <FiMenu size={20} />
                     </button>
 
                     {openSmallMenu && (
-                        <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow z-50">
+                        <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white text-black rounded shadow z-50">
                             <Link
                                 href="/about"
                                 onClick={() => setOpenSmallMenu(false)}
