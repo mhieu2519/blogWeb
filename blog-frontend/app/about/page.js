@@ -76,12 +76,12 @@ export default function AboutPage() {
                         />
                         <h2 className="text-3xl mt-5 font-bold text-pink-800">Mình là Hieu NM</h2>
                         <p className="mt-4 text-gray-700 leading-relaxed whitespace-pre-line">
-                            Yêu văn chương, đam mê khám phá, mình viết để giữ lại những khoảnh khắc, cảm xúc và hành trình.
+                            {` Yêu văn chương, đam mê khám phá, mình viết để giữ lại những khoảnh khắc, cảm xúc và hành trình.
                             Tuổi trẻ có ai từng đơn độc?
                             Bước chân dài dưới những vì sao...
                             Khi bạn chẳng có gì, sẽ chẳng ai muốn nghe về cuộc đời của bạn cả.
                             Tôi vui vì mình không trong số đó!
-                            Bạn hiểu ý tôi chứ? Cảm ơn vì đã theo dõi câu chyện của tôi,..
+                            Bạn hiểu ý tôi chứ? Cảm ơn vì đã theo dõi câu chyện của tôi,..`}
 
                         </p>
                     </motion.div>
