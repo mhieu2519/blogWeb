@@ -118,7 +118,7 @@ h2,
     display: block;
 }
 
-span1 {
+.icon {
     display: block;
 }
 
@@ -149,7 +149,7 @@ h1 {
     letter-spacing: 6px;
 }
 
-span1 {
+.icon {
     position: absolute;
     text-align: center;
     width: 100%;

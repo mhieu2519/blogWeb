@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 import { useEffect, useState, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import "./event.css";
@@ -57,7 +59,7 @@ export default function EventPage() {
                 <div className="after"></div>
             </div>
 
-            <span1>🎉</span1>
+            <div className='icon'>🎉</div>
 
             <div className={`candle ${blown ? "moved" : ""}`}>
                 <div
