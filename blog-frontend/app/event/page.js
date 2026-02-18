@@ -3,9 +3,11 @@ import EventClient from "./EventClient";
 
 export const dynamic = "force-dynamic";
 
-export default function EventPage({ searchParams }) {
-    const dateStr = searchParams?.t;
-    const displayName = searchParams?.n;
+export default async function EventPage({ searchParams }) {
+    const params = await searchParams;
+
+    const dateStr = params?.t;
+    const displayName = params?.n;
 
     let formattedDate = "";
     let name = "";

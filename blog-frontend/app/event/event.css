@@ -52,7 +52,50 @@
     overflow-x: hidden;
 }
 
+.number-candles {
+    position: absolute;
+    top: 465px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    z-index: 40;
+}
 
+.number-candles.moved {
+    transform: translateX(500px);
+}
+
+.digit-candle {
+    position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff6b9d;
+    text-shadow: 0 0 10px rgba(255, 0, 100, 0.5);
+    z-index: 40;
+}
+
+.digit-flame {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 20px;
+    background: radial-gradient(circle, yellow 0%, orange 60%, transparent 70%);
+    border-radius: 50%;
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+        transform: translateX(-50%) scale(1);
+    }
+
+    to {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
 
 /* ===== Overlay tối màn hình ===== *
 .overlay {
@@ -1406,6 +1449,9 @@ h2 {
         transform: scale(0.8) translateY(50px);
     }
 
+    .number-candles.moved {
+        transform: scale(0.8) translateY(50px);
+    }
 
 
     span1 {
