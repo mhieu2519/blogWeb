@@ -54,7 +54,7 @@
 
 .number-candles {
     position: absolute;
-    top: 465px;
+    top: 72vh;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -1435,6 +1435,10 @@ h2 {
 
     .cake {
         top: 400px;
+    }
+
+    .number-candles {
+        top: 450px;
     }
 
     .candle {
