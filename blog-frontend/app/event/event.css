@@ -1433,6 +1433,10 @@ h2 {
         padding: 20px 15px;
     }
 
+    .date {
+        font-size: 60px;
+    }
+
     .cake {
         top: 400px;
     }
@@ -1446,15 +1450,15 @@ h2 {
     }
 
     .cake.moved {
-        transform: scale(0.8) translateY(50px);
+        transform: scale(0.8) translateY(100px);
     }
 
     .candle.moved {
-        transform: scale(0.8) translateY(50px);
+        transform: scale(0.8) translateY(100px);
     }
 
     .number-candles.moved {
-        transform: scale(0.8) translateY(50px);
+        transform: scale(0.8) translateY(100px);
     }
 
 
@@ -1484,10 +1488,12 @@ h2 {
     .message h3 {
         font-size: 28px;
         text-shadow: 0 0 10px #ff69b4;
+        transform: translateY(40px);
     }
 
     .message p {
         font-size: 16px;
+        transform: translateY(40px);
     }
 
 }
